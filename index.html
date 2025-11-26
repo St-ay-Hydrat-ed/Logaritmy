@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Logarimujeme</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+        <div class="sticky-top" > 
+<nav class="navbar navbar-expand-sm " data-aos="fade-down" data-aos-duration="3000" data-aos-offset="500">
+
+  <div class="container-fluid " style="background-color:#329ad6; font-size: 22px;"> 
+   <button class="navbar-toggler w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon "  ></span>
+    </button>
+ 
+   
+   
+    <div class="collapse navbar-collapse navigace" id="collapsibleNavbar">    <div class="ms-auto">
+    <ul class="navbar-nav ">
+      
+    
+      <li class="nav-item ">
+        <a class="nav-link px-5" href="vysvetleni.html" style="color: rgb(235, 245, 247);">Teorie</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link px-5" href="#nevim" style="color: rgb(235, 245, 247);">Řešené příklady</a>
+      </li> 
+   
+       <li class="nav-item "> 
+        <a class="nav-link ps-5" href="#nevim" style="color: rgb(235, 245, 247);">Zkušební test</a>
+      </li>
+    
+      </div>
+    
+    <div class="ms-auto ">
+  
+    </ul></div></div>
+
+
+</nav>
+</div> 
+        </header>
+        <main>
+            <div class=" container-fluid hero  d-flex flex-column justify-content-center align-items-center ">
+            <h1 id="decipher-text">Logaritmy</h1>
+            
+            
+                <div class="container">
+                    <div class="row d-flex justify-content-center " data-aos="fade-up" data-aos-duration="900">
+                  <a href="vysvetleni.html" class="col-lg-3 mt-5 py-3 mx-4 col-sm-12 btn">Teorie</a>
+                   
+                   <a href="" class="btn   col-lg-3 mt-5 py-3 mx-4 col-sm-12">Řešené příklady</a>
+                    
+                   <a href="" class="btn   col-lg-3 mt-5 py-3 mx-4 col-sm-12">Zkušební test</a>
+            
+                </div>
+
+
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid">
+
+              <div class="row text-center pt-2 mb-3">
+
+                <div class="col-lg-4 pt-3">
+                <a href="https://webwhiteboard.com/" target="_blank">  <i class="fa-duotone fa-solid fa-chalkboard ikonka"></i></a>
+                <a href="https://maturita.cermat.cz/menu/testy-a-zadani-z-predchozich-obdobi" target="_blank">  <i class="fa-solid fa-graduation-cap ikonka mx-4"></i></a>
+                <a href="https://www.oavm.cz/" target="_blank">  <i class="fa-solid fa-house ikonka"></i></a>
+                </div>
+                <div class="col-lg-4 "> OAVM<br>J&J &copy; 2025, všechna práva vyhrazena</div>
+                <div class="col-lg-4"></div>
+                
+
+              </div>
+
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+         <script>
+    function decipherText(element, finalText, speed = 50) {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?";
+      let iterations = 0;
+
+      const interval = setInterval(() => {
+        element.innerText = finalText
+          .split("")
+          .map((char, i) => {
+            if (i < iterations) return finalText[i];
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join("");
+
+        if (iterations >= finalText.length) clearInterval(interval);
+        iterations += 1 / 2; // Slower or faster progression
+      }, speed);
+    }
+
+    const el = document.getElementById("decipher-text");
+    const textToShow = el.innerText;
+
+    // Optional: clear the text initially
+    el.innerText = "UIHJN!?J";
+
+    // Start the effect after a short delay
+    setTimeout(() => {
+      decipherText(el, textToShow);
+    }, );
+  </script>
+<script src="https://kit.fontawesome.com/8fa8592569.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+    </body>
+</html>

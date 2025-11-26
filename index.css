@@ -1,0 +1,132 @@
+*{    transition: all;
+    transition-duration: 800ms;}
+
+.hero{
+
+    background-image:url(pozadi.svg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:unset;
+    
+    
+
+    
+    
+}
+
+h1{font-size: 160px;
+    font-weight: 900;
+    color: #329ad6;
+    text-shadow: 0px 0 10px;
+   
+    
+}
+
+
+ .btn{
+    
+    background-color: #329ad6 !important;
+    color: rgb(235, 245, 247);
+    font-size: 24px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-shadow: 0px 0 10px;
+}
+
+
+.btn:hover{
+    
+    background-color: rgb(235, 245, 247)!important;
+    color: #329ad6;
+    box-shadow: 0px 0 20px rgb(235, 245, 247);
+    
+}
+
+
+.navbar{
+    color: #329ad6!important;
+    padding: 0 !important;
+    margin-bottom: -49px;
+}
+
+
+.nav-item{
+
+    font-weight: 500 !important;
+
+}
+
+li:hover{
+
+    box-shadow: 0 0 20px;
+
+
+}
+
+.ikonka{
+  font-size: 40px;
+  color: #787878;
+}
+
+.ikonka:hover{
+
+  color: #329ad6;
+
+}
+footer{
+
+    font-weight: 500;
+    font-size: 20px;
+    height: 100px;
+    background-color: #252525;
+    color: #999999;
+
+}
+
+.predel{
+
+    background-color: #329ad6;
+
+}
+
+@media screen and (max-width:320px){    
+
+    h1{
+
+        font-size: 50px !important;}
+
+
+
+}
+@media screen and (max-width:400px){    
+
+    h1{
+
+        font-size: 50px !important;
+
+    }
+
+}
+
+@media screen and (max-width:480px){    
+
+    h1{
+
+        font-size: 50px;
+
+    }
+
+}
+
+@media screen and (max-width:920px){    
+
+    h1{
+
+        font-size: 80px;
+
+    }
+
+}
+
