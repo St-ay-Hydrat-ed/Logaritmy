@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Test.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler text-white ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold px-4" href="index.html">Úvod</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold px-4" href="vysvetleni.html"
+                >Teorie</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold px-4" href="Resene_priklady.html">Řešené příklady</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-fill">
+      <div class="container d-flex justify-content-center">
+        <div class="quiz-card">
+          <div class="question" id="question"></div>
+
+          <input
+            type="text"
+            class="answer"
+            id="answer"
+            placeholder="Zadejte odpověď"
+          />
+
+          <div class="d-flex justify-content-between mt-4">
+            <button type="button" class="btn" id="zpet">
+              <i class="fa-solid fa-chevron-left me-2"></i>ZPĚT
+            </button>
+            <p id="counter" class="fw-bold"></p>
+            <button type="button" class="btn" id="dalsi">
+              DALŠÍ<i class="fa-solid fa-chevron-right ms-2"></i>
+            </button>
+          </div>
+
+          <div class="mt-4 d-flex flex-column align-items-center">
+            <button
+              id="retryBtn"
+              class="btn mb-2"
+              style="display: none"
+              onclick="location.reload()"
+            >
+              Opakovat test
+            </button>
+
+            <button
+              id="backBtn"
+              class="btn"
+              style="display: none"
+              onclick="window.location.href='index.html'"
+            >
+              Zpět na hlavní stránku
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-fluid">
+        <div class="row text-center pt-2 pb-3">
+          <div class="col-lg-4 pt-3">
+            <a href="https://www.instagram.com/oavalmez/" target="_blank">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://soundcloud.com/obchodn-akademie-a-vo"
+              target="_blank"
+            >
+              <i class="fa-brands fa-soundcloud px-3"></i
+            ></a>
+            <a href="https://miro.com/online-whiteboard/" target="_blank">
+              <i class="fa-solid fa-chalkboard"></i
+            ></a>
+          </div>
+          <div class="col-lg-4 py-3">
+            <a href="https://www.oavm.cz/" target="_blank"
+              ><img src="oavm-logo-red_blue.svg" alt="" class="img-fluid"
+            /></a>
+            <p class="pt-3">J&J &copy; 2025, všechna práva vyhrazena</p>
+          </div>
+          <div class="col-lg-4">
+            <a href="#">Zpět nahoru</a><br /><a href="index.html"
+              >Hlavní Stránka</a
+            ><br /><a href="">Řešené příklady</a><br /><a href=""
+              >Zkušební Test</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const quizData = [
+        { question: "Vypočítej log₂(2)", correct: 1 },
+        
+        { question: "Vypočítej log₂(16)", correct: 4 },
+        { question: "Vypočítej log₃(3)", correct: 1 },
+        { question: "Vypočítej log₃(81)", correct: 4 },
+        { question: "Vypočítej log₄(4)", correct: 1 },
+
+        { question: "Vypočítej log₅(125)", correct: 3 },
+        { question: "Vypočítej log₆(216)", correct: 3 },
+        { question: "Vypočítej log₇(1)", correct: 0 },
+        { question: "Vypočítej log₈(8)", correct: 1 },
+        { question: "Vypočítej log₈(512)", correct: 3 },
+
+        { question: "Vypočítej log₂(64/8)", correct: 3 },
+        { question: "Vypočítej log₃(243/3)", correct: 4 },
+        { question: "Vypočítej log₅(625/25)", correct: 2 },
+        { question: "Vypočítej log₂(4*8)", correct: 5 },
+        { question: "Vypočítej log₃(27*9)", correct: 5 },
+        { question: "Vypočítej log₄(64/4)", correct: 2 },
+        { question: "Vypočítej log₇(343*7)", correct: 4 },
+        { question: "Vypočítej log₆(216/6)", correct: 2 },
+        { question: "Vypočítej log₈(512/64)", correct: 1 },
+        { question: "Vypočítej log₂(128/2)", correct: 6 },
+         
+      ];
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      let questionOrder = shuffle([...Array(quizData.length).keys()]);
+      let currentQuestion = 0;
+      let score = 0;
+
+      let answersArray = [];
+      let correctArray = [];
+
+      const questionEl = document.getElementById("question");
+      const answerEl = document.getElementById("answer");
+      const nextBtn = document.getElementById("dalsi");
+      const backBtn = document.getElementById("zpet");
+      const counterEl = document.getElementById("counter");
+
+      const retryBtn = document.getElementById("retryBtn");
+      const backBtnEnd = document.getElementById("backBtn");
+
+      function loadQuestion() {
+        const data = quizData[questionOrder[currentQuestion]];
+        questionEl.textContent = data.question;
+        counterEl.textContent = `${currentQuestion + 1} / ${quizData.length}`;
+
+        answerEl.value = answersArray[currentQuestion] ?? "";
+
+        if (currentQuestion === quizData.length - 1) {
+          nextBtn.innerHTML = "DOKONČIT";
+          nextBtn.onclick = finishTest;
+        } else {
+          nextBtn.innerHTML = `DALŠÍ<i class="fa-solid fa-chevron-right ms-2"></i>`;
+          nextBtn.onclick = checkAnswer;
+        }
+      }
+
+      function checkAnswer() {
+        const text = answerEl.value;
+
+        if (text === "") {
+          answerEl.placeholder = "Zadejte hodnotu!!";
+          answerEl.style.fontWeight = "bold";
+          return;
+        }
+
+        answerEl.placeholder = "Zadejte odpověď";
+        answerEl.style.fontWeight = "normal";
+
+        const userValue = Number(text);
+
+        answersArray[currentQuestion] = userValue;
+        correctArray[currentQuestion] =
+          quizData[questionOrder[currentQuestion]].correct;
+
+        currentQuestion++;
+        loadQuestion();
+      }
+
+      function backButton() {
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          loadQuestion();
+        }
+      }
+
+      function finishTest() {
+        const text = answerEl.value;
+
+        if (text === "") {
+          answerEl.placeholder = "Zadejte hodnotu!!";
+          answerEl.style.fontWeight = "bold";
+          return;
+        }
+
+        const userValue = Number(text);
+        answersArray[currentQuestion] = userValue;
+        correctArray[currentQuestion] =
+          quizData[questionOrder[currentQuestion]].correct;
+
+        score = 0;
+        for (let i = 0; i < quizData.length; i++) {
+          if (answersArray[i] === correctArray[i]) {
+            score++;
+          }
+        }
+
+        questionEl.textContent = `Na testu se ti povedlo získat ${score} bodů z ${quizData.length}`;
+
+        answerEl.style.display = "none";
+        counterEl.style.display = "none";
+        nextBtn.style.display = "none";
+        backBtn.style.display = "none";
+
+        retryBtn.style.display = "block";
+        backBtnEnd.style.display = "block";
+      }
+
+      backBtn.onclick = backButton;
+      nextBtn.onclick = checkAnswer;
+
+      loadQuestion();
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+html, body{
+  height: 100%;
+}
+
+body {  
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #c2b6ff, #c8e4ff);
+
+}
+.container {
+  margin-top: 150px;
+}
+nav {
+  background-color: #3b82b3;
+}
+nav li{
+  font-size: 18px;
+}
+
+.quiz-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  background-color: #3b82b3;
+  color: white;
+  font-size: 24px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #3b82b3;
+  color: white;
+}
+.form-control {
+  width: 100%;
+  margin-right: 10px;
+  
+}
+
+.solution {
+  padding: 30px;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: none;
+  
+  transform: translateY(-40px) scale(1);
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
+              opacity 0.35s ease;
+  font-weight: 600;
+}
+.solution.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0)scale(1);
+}
+
+
+.correct {
+  background-color: #d4f8d4;
+  color: #1c6b1c;
+  border: 2px solid #77c977;
+}
+
+.wrong {
+  background-color: #ffd6d6;
+  color: #8b0000;
+  border: 2px solid #eea9a9;
+}
+
+.fa-instagram{
+  background-image: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  color: transparent;
+  background-clip: text;
+  font-size: 60px;
+}
+
+.fa-soundcloud{
+
+    color: #FF5500;
+    font-size:60px;
+
+}
+
+.fa-chalkboard{
+    font-size:50px;
+    color: #3A6D58;
+
+}
+
+footer{
+margin-top: 90px;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #272727;
+    color: #999999;
+
+}
+
+
+
+footer i:hover{
+
+    color: #cecdcd;
+
+}
+
+footer a{text-decoration: none;
+        color: #999999;
+        font-size: 20px;
+
+}
+
+footer a:hover{color: #cecdcd;}
+
+
+footer img{
+
+
+    max-height: 30px;
+
+
+}
+
+
+@media (max-width: 750px) {
+  .form-control {
+    margin-right: 0;
+
+  }
+  .quiz-card {
+    width: 100%;
+  }
+  .justify-content-between {
+    flex-direction: column;
+  }
+  .justify-content-between button{
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+}
+@media (hover: hover) {
+  .btn:hover {
+    background-color: #cddbf1;
+    transition: all 0.3s;
+  }
+}

@@ -39,7 +39,7 @@ li:hover{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
-    background-position:unset;
+    background-position: center;
     
     
 
@@ -88,6 +88,7 @@ h4{
 }
 
 footer{
+  
 
     font-weight: 500;
     font-size: 15px;
@@ -174,7 +175,7 @@ left: 0;
 
   #arrow1 {
     animation-delay: 2s;
-     font-size: 60px; /* Larger size for better visibility */
+     font-size: 60px; 
     color: #329ad6 !important; 
     text-shadow: 0 0 10px;
     font-weight: 800;
@@ -222,11 +223,11 @@ left: 0;
 
   }
 
-  @media screen and (max-width:320px){
+  @media screen and (max-width:400px){
 
     h1{
 
-        font-size: 50px;
+        font-size: 100px;
 
     }
 

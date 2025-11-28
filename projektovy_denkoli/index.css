@@ -1,0 +1,114 @@
+* {
+  transition: all;
+  transition-duration: 800ms;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background-image: url(pozadi.svg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 160px;
+  font-weight: 900;
+  color: #329ad6;
+  text-shadow: 0px 0 10px;
+}
+
+.btn {
+  background-color: #329ad6 !important;
+  color: rgb(235, 245, 247);
+  font-size: 24px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-shadow: 0px 0 10px;
+}
+
+.btn:hover {
+  background-color: rgb(235, 245, 247) !important;
+  color: #329ad6;
+  box-shadow: 0px 0 20px rgb(235, 245, 247);
+}
+
+.navbar {
+  color: #329ad6 !important;
+  padding: 0 !important;
+  margin-bottom: -49px;
+}
+
+.nav-item {
+  font-weight: 500 !important;
+}
+
+li:hover {
+  box-shadow: 0 0 20px;
+}
+
+.fa-instagram {
+  background-image: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+  color: transparent;
+  background-clip: text;
+  font-size: 60px;
+}
+
+.fa-soundcloud {
+  color: #ff5500;
+  font-size: 60px;
+}
+
+.fa-chalkboard {
+  font-size: 50px;
+  color: #3a6d58;
+}
+
+footer {
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #272727;
+  color: #999999;
+}
+
+footer i:hover {
+  color: #cecdcd;
+}
+
+footer a {
+  text-decoration: none;
+  color: #999999;
+  font-size: 20px;
+}
+
+footer a:hover {
+  color: #cecdcd;
+}
+
+footer img {
+  max-height: 30px;
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 50px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 50px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  h1 {
+    font-size: 80px;
+  }
+}
