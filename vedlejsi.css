@@ -5,8 +5,7 @@
 
 
 main{
-background: #a9d0eb;
-background: linear-gradient(160deg, rgba(169, 208, 235, 1) 0%, rgba(107, 157, 179, 1) 100%);
+background-color: rgb(240, 240, 240);
 }
 
 .navbar{
@@ -19,6 +18,23 @@ background: linear-gradient(160deg, rgba(169, 208, 235, 1) 0%, rgba(107, 157, 17
     z-index: 999;
 }
 
+.praxe{
+
+  background-color: #EAEAEA !important;
+  outline-color: #EAEAEA !important;
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+.praxe:hover{
+
+
+  background-color: #252525 !important;
+  color: #EAEAEA;
+
+
+}
 
 .nav-item{
 

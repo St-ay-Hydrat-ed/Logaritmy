@@ -1,3 +1,8 @@
+*{    transition: all;
+    transition-duration: 800ms;
+
+}
+
 html, body{
   height: 100%;
 }
@@ -5,17 +10,29 @@ html, body{
 body {  
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
   background: linear-gradient(to right, #c2b6ff, #c8e4ff);
 }
 .container {
   margin-top: 150px;
 }
-nav {
-  background-color: #3b82b3;
+.navbar{
+    color: #329ad6!important;
+    padding: 0 !important;
+    margin-bottom: -49px;
 }
-nav li{
-  font-size: 18px;
+
+
+.nav-item{
+
+    font-weight: 500 !important;
+
+}
+
+li:hover{
+
+    box-shadow: 0 0 20px;
+
+
 }
 
 
@@ -30,7 +47,7 @@ nav li{
 }
 
 .question {
-  background-color: #3b82b3;
+  background-color: #329ad6;
   color: white;
   font-size: 24px;
   padding: 30px;
@@ -40,7 +57,7 @@ nav li{
 }
 
 .btn {
-  background-color: #3b82b3;
+  background-color: #329ad6;
   color: white;
 }
 .answer {
